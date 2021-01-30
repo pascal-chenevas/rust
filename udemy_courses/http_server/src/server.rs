@@ -30,14 +30,6 @@ impl Server {
                                 }
                                 Err(e) => println!("Failed to parse request: {}", e),
                             }
-                            /*let response = match Request::try_from(&buffer[..]) {
-                                Ok(request) => handler.handle_request(&request),
-                                Err(e) => handler.handle_bad_request(&e),
-                            };
-
-                            if let Err(e) = response.send(&mut stream) {
-                                println!("Failed to send response: {}", e);
-                            }*/
                         }
                         Err(e) => println!("Failed to read from connection: {}", e),
                     }
